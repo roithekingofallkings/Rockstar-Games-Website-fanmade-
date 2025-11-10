@@ -218,22 +218,6 @@
         transition-delay: 0.35s;
       }
 
-      /* accessibility: disable motion if user prefers reduced motion */
-      @media (prefers-reduced-motion: reduce) {
-        #myCarousel .carousel-caption > *,
-        #myCarousel .carousel-item.active .carousel-caption > * {
-          animation: none !important;
-          opacity: 1 !important;
-          transform: none !important;
-        }
-        .reveal,
-        .reveal-stagger > * {
-          transition: none !important;
-          opacity: 1 !important;
-          transform: none !important;
-        }
-      }
-
       /* navbar brand logo sizing */
       .brand-logo {
         height: 28px;
@@ -244,6 +228,16 @@
         .brand-logo {
           height: 32px;
         }
+      }
+
+      /* make the mobile menu narrower + backdrop lighter */
+      @media (max-width: 991.98px) {
+        #offcanvasNavbar.offcanvas-end {
+          width: 260px;
+        }
+      }
+      .offcanvas-backdrop.show {
+        background-color: rgba(0, 0, 0, 0.4);
       }
 
       /* ====== MOBILE TWEAKS ====== */
@@ -338,20 +332,19 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 gap-1">
-  <li class="nav-item">
-    <a class="nav-link active" href="#" data-bs-dismiss="offcanvas">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#characters" data-bs-dismiss="offcanvas">Characters</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#gta6" data-bs-dismiss="offcanvas">GTA VI</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#footer" data-bs-dismiss="offcanvas">Info</a>
-  </li>
-</ul>
-
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#characters">Characters</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gta6">GTA VI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Info</a>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -801,4 +794,3 @@
     </script>
   </body>
 </html>
-
