@@ -22,11 +22,11 @@
         --bs-emphasis-color: #ffffff;
 
         --bs-secondary-bg: #15171a; /* cards/featurettes */
-        --bs-tertiary-bg: #111316;  /* hero panels */
+        --bs-tertiary-bg: #111316; /* hero panels */
         --bs-border-color: #26292d;
 
-        --bs-primary: #f9c300;      /* Rockstar-ish yellow */
-        --bs-primary-rgb: 249,195,0;
+        --bs-primary: #f9c300; /* Rockstar-ish yellow */
+        --bs-primary-rgb: 249, 195, 0;
         --bs-link-color: #ffd24d;
         --bs-link-hover-color: #ffe285;
 
@@ -34,70 +34,134 @@
       }
 
       /* Hero panel */
-      .bg-body-tertiary { background-color: var(--bs-tertiary-bg) !important; }
+      .bg-body-tertiary {
+        background-color: var(--bs-tertiary-bg) !important;
+      }
 
       /* Marketing layout spacing */
-      .marketing .col-lg-4 { text-align: center; }
-      .marketing .col-lg-4 p { margin: 0 0 1rem; }
+      .marketing .col-lg-4 {
+        text-align: center;
+      }
+      .marketing .col-lg-4 p {
+        margin: 0 0 1rem;
+      }
 
       /* Carousel image crop & caption */
-      #myCarousel .carousel-item > img { height: 450px; object-fit: cover; object-position: center 30%; }
-      #myCarousel .carousel-caption { text-align: left; }
+      #myCarousel .carousel-item > img {
+        height: 450px;
+        object-fit: cover;
+        object-position: center 30%;
+      }
+      #myCarousel .carousel-caption {
+        text-align: left;
+      }
       #myCarousel .carousel-caption h1,
-      #myCarousel .carousel-caption p { text-shadow: 0 2px 12px rgba(255,255,255,.75); }
+      #myCarousel .carousel-caption p {
+        text-shadow: 0 2px 12px rgba(255, 255, 255, 0.75);
+      }
 
       /* Carousel indicators */
-      .carousel-indicators [data-bs-target] { background-color: rgba(var(--bs-primary-rgb), .45); }
-      .carousel-indicators .active { background-color: var(--bs-primary); }
+      .carousel-indicators [data-bs-target] {
+        background-color: rgba(var(--bs-primary-rgb), 0.45);
+      }
+      .carousel-indicators .active {
+        background-color: var(--bs-primary);
+      }
 
       /* Buttons */
-      .btn-primary { background-color: var(--bs-primary); border-color: var(--bs-primary); color:#000 !important; }
-      .btn-primary:hover { filter: brightness(1.05); color:#000 !important; }
+      .btn-primary {
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+        color: #000 !important;
+      }
+      .btn-primary:hover {
+        filter: brightness(1.05);
+        color: #000 !important;
+      }
 
       /* Offcanvas subtle edge */
-      .offcanvas { border-left: 1px solid var(--bs-border-color); }
+      .offcanvas {
+        border-left: 1px solid var(--bs-border-color);
+      }
 
       /* Modal backdrop + surface */
-      .modal-backdrop { backdrop-filter: blur(8px); background-color: rgba(0,0,0,.6); }
-      .modal-backdrop.show { opacity: 1; }
-      .modal-content { background-color: var(--bs-secondary-bg); }
+      .modal-backdrop {
+        backdrop-filter: blur(8px);
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      .modal-backdrop.show {
+        opacity: 1;
+      }
+      .modal-content {
+        background-color: var(--bs-secondary-bg);
+      }
 
       /* GTA VI image-filled heading */
-      .gta6-text{
-        font-family: Impact, 'Anton', sans-serif;
+      .gta6-text {
+        font-family: Impact, "Anton", sans-serif;
         font-size: clamp(2.5rem, 7vw, 5.5rem);
         background: url("images/gta 6 background.png") center/cover no-repeat;
-        -webkit-background-clip: text; background-clip: text;
-        color: transparent; -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
         letter-spacing: 6px;
-        text-shadow: 0 0 30px rgba(0,0,0,.6);
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
         animation: slide-bg 20s linear infinite alternate;
       }
-      @keyframes slide-bg { from { background-position: 0% center; } to { background-position: 100% center; } }
+      @keyframes slide-bg {
+        from {
+          background-position: 0% center;
+        }
+        to {
+          background-position: 100% center;
+        }
+      }
 
       /* Space under the GTA VI banner */
-      .gta6-banner { margin-bottom: 4rem; }
+      .gta6-banner {
+        margin-bottom: 4rem;
+      }
 
       /* Character cards */
-      #characters .card { background-color: var(--bs-tertiary-bg); }
-      #characters { margin-top: 2rem; margin-bottom: 2rem; }
-      #characters .card:hover { transform: translateY(-2px); transition: transform .15s ease; }
+      #characters .card {
+        background-color: var(--bs-tertiary-bg);
+      }
+      #characters {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      #characters .card:hover {
+        transform: translateY(-2px);
+        transition: transform 0.15s ease;
+      }
 
       /* Consistent circular avatars */
-      .avatar-220{
+      .avatar-220 {
         width: 220px;
         height: 220px;
-        object-fit: cover;       /* fill the circle without squish */
-        object-position: 50% 50%;/* center by default */
+        object-fit: cover; /* fill the circle without squish */
+        object-position: 50% 50%; /* center by default */
       }
       /* Optional: tweak subject framing per image */
-      .avatar-220.avatar-jason{ object-position: 50% 5%; }
+      .avatar-220.avatar-jason {
+        object-position: 50% 5%;
+      }
 
       /* === Carousel caption: rise-from-below + fade-in === */
       @keyframes riseFadeIn {
-        0%   { opacity: 0; transform: translateY(26px); }
-        60%  { opacity: .9; transform: translateY(4px); }
-        100% { opacity: 1;  transform: translateY(0); }
+        0% {
+          opacity: 0;
+          transform: translateY(26px);
+        }
+        60% {
+          opacity: 0.9;
+          transform: translateY(4px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       /* start hidden so inactive slides don't show */
       #myCarousel .carousel-caption > * {
@@ -110,15 +174,21 @@
         animation: riseFadeIn 1.65s ease-out forwards;
       }
       /* gentle stagger: h1, p, button */
-      #myCarousel .carousel-item.active .carousel-caption > *:nth-child(1) { animation-delay: .05s; }
-      #myCarousel .carousel-item.active .carousel-caption > *:nth-child(2) { animation-delay: .18s; }
-      #myCarousel .carousel-item.active .carousel-caption > *:nth-child(3) { animation-delay: .32s; }
+      #myCarousel .carousel-item.active .carousel-caption > *:nth-child(1) {
+        animation-delay: 0.05s;
+      }
+      #myCarousel .carousel-item.active .carousel-caption > *:nth-child(2) {
+        animation-delay: 0.18s;
+      }
+      #myCarousel .carousel-item.active .carousel-caption > *:nth-child(3) {
+        animation-delay: 0.32s;
+      }
 
       /* === Scroll reveal (characters + featurettes) === */
       .reveal {
         opacity: 0;
         transform: translateY(26px);
-        transition: opacity .65s ease, transform .65s ease;
+        transition: opacity 0.65s ease, transform 0.65s ease;
         will-change: opacity, transform;
       }
       .reveal.is-visible {
@@ -129,13 +199,24 @@
       .reveal-stagger > * {
         opacity: 0;
         transform: translateY(22px);
-        transition: opacity .6s ease, transform .6s ease;
+        transition: opacity 0.6s ease, transform 0.6s ease;
       }
-      .reveal-stagger.is-visible > * { opacity: 1; transform: none; }
-      .reveal-stagger.is-visible > *:nth-child(1) { transition-delay: .05s; }
-      .reveal-stagger.is-visible > *:nth-child(2) { transition-delay: .15s; }
-      .reveal-stagger.is-visible > *:nth-child(3) { transition-delay: .25s; }
-      .reveal-stagger.is-visible > *:nth-child(4) { transition-delay: .35s; }
+      .reveal-stagger.is-visible > * {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal-stagger.is-visible > *:nth-child(1) {
+        transition-delay: 0.05s;
+      }
+      .reveal-stagger.is-visible > *:nth-child(2) {
+        transition-delay: 0.15s;
+      }
+      .reveal-stagger.is-visible > *:nth-child(3) {
+        transition-delay: 0.25s;
+      }
+      .reveal-stagger.is-visible > *:nth-child(4) {
+        transition-delay: 0.35s;
+      }
 
       /* accessibility: disable motion if user prefers reduced motion */
       @media (prefers-reduced-motion: reduce) {
@@ -154,8 +235,45 @@
       }
 
       /* navbar brand logo sizing */
-      .brand-logo { height: 28px; width: auto; display: block; }
-      @media (min-width: 768px){ .brand-logo { height: 32px; } }
+      .brand-logo {
+        height: 28px;
+        width: auto;
+        display: block;
+      }
+      @media (min-width: 768px) {
+        .brand-logo {
+          height: 32px;
+        }
+      }
+
+      /* ====== MOBILE TWEAKS ====== */
+      @media (max-width: 576px) {
+        /* shorter carousel on phones */
+        #myCarousel .carousel-item > img {
+          height: 320px;
+        }
+        /* center captions better on narrow screens */
+        #myCarousel .carousel-caption {
+          text-align: left;
+          padding-right: 1rem;
+          padding-left: 1rem;
+        }
+        /* smaller avatars so cards don't overflow */
+        .avatar-220 {
+          width: 170px;
+          height: 170px;
+        }
+        /* footer doesn't squish */
+        footer .d-flex {
+          flex-direction: column;
+          gap: 0.75rem;
+          align-items: flex-start;
+        }
+        /* GTA text less wide feeling */
+        .gta6-banner {
+          margin-bottom: 3rem;
+        }
+      }
     </style>
   </head>
 
@@ -163,72 +281,96 @@
     <!-- SVG sprite (icons used below) -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="aperture" viewBox="0 0 16 16" fill="currentColor">
-        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.343 4.222A6.5 6.5 0 0 1 6.9 1.51L4.9 5.0 2.343 4.222Zm9.9-.707A6.5 6.5 0 0 1 14.5 8a6.45 6.45 0 0 1-.452 2.4L10.9 9.0l1.343-5.485Z"/>
+        <path
+          d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.343 4.222A6.5 6.5 0 0 1 6.9 1.51L4.9 5.0 2.343 4.222Zm9.9-.707A6.5 6.5 0 0 1 14.5 8a6.45 6.45 0 0 1-.452 2.4L10.9 9.0l1.343-5.485Z"
+        />
       </symbol>
       <symbol id="cart" viewBox="0 0 16 16" fill="currentColor">
-        <path d="M0 1a1 1 0 0 1 1-1h2l.4 2H16l-1.5 6H4.118l-.5 2H14v1H3a1 1 0 0 1-.97-.758L.22 1.22A1 1 0 0 1 0 1Zm5 14a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/>
+        <path
+          d="M0 1a1 1 0 0 1 1-1h2l.4 2H16l-1.5 6H4.118l-.5 2H14v1H3a1 1 0 0 1-.97-.758L.22 1.22A1 1 0 0 1 0 1Zm5 14a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"
+        />
       </symbol>
       <symbol id="chevron-right" viewBox="0 0 16 16" fill="currentColor">
-        <path fill-rule="evenodd" d="M6.146 3.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L9.793 8 6.146 4.354a.5.5 0 0 1 0-.708Z"/>
+        <path
+          fill-rule="evenodd"
+          d="M6.146 3.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L9.793 8 6.146 4.354a.5.5 0 0 1 0-.708Z"
+        />
       </symbol>
     </svg>
 
     <!-- NAVBAR -->
-<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
-  <div class="container">
+    <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
+      <div class="container">
+        <!-- BRAND -->
+        <a class="navbar-brand d-flex align-items-center gap-2 me-3 me-lg-5" href="#" aria-label="Portfolio fan project">
+          <!-- Inline logo -->
+          <svg class="brand-logo" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+            <rect x="8" y="8" width="240" height="240" rx="28" fill="#f9c300" />
+            <g fill="#111316" font-family="Inter, Arial, sans-serif" font-weight="800">
+              <text x="48" y="148" font-size="108">R</text>
+              <text x="128" y="148" font-size="108">G</text>
+            </g>
+            <polygon
+              points="206,60 212,78 231,78 215,89 221,106 206,96 191,106 197,89 181,78 200,78"
+              fill="#111316"
+            />
+          </svg>
+          <span>Rockstar Games (fan project)</span>
+        </a>
 
-    <!-- BRAND -->
-    <a class="navbar-brand d-flex align-items-center gap-2 me-3 me-lg-5" href="#" aria-label="Portfolio fan project">
-      <!-- Inline logo (keep or swap src to an image if you prefer) -->
-      <svg class="brand-logo" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
-        <rect x="8" y="8" width="240" height="240" rx="28" fill="#f9c300"/>
-        <g fill="#111316" font-family="Inter, Arial, sans-serif" font-weight="800">
-          <text x="48" y="148" font-size="108">R</text>
-          <text x="128" y="148" font-size="108">G</text>
-        </g>
-        <polygon points="206,60 212,78 231,78 215,89 221,106 206,96 191,106 197,89 181,78 200,78" fill="#111316"/>
-      </svg>
-      <span>Rockstar Games (fan project)</span>
-    </a>
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- OFFCANVAS (only once) -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Rockstar Games</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 gap-1">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#characters">Characters</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gta6">GTA VI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Info</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Rockstar Games</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- Cart icon aligned to right (desktop) -->
+        <ul class="navbar-nav ms-auto d-none d-md-flex">
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-label="Cart">
+              <svg class="bi" width="24" height="24" aria-hidden="true">
+                <use href="#cart"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Rockstar Games</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <!-- You can add nav links here later -->
-  </div>
-</div>
-
-<!-- Cart icon aligned to right -->
-<ul class="navbar-nav ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="#" aria-label="Cart">
-      <svg class="bi" width="24" height="24" aria-hidden="true">
-        <use href="#cart"></use>
-      </svg>
-    </a>
-  </li>
-</ul>
-
-</div> <!-- end .container -->
-</nav>
-
+    </nav>
 
     <!-- HERO -->
-    <section class="py-5 bg-body-tertiary text-center">
+    <section class="py-5 bg-body-tertiary text-center" id="gta6">
       <div class="container py-4">
-        <h1 class="display-3 fw-bold" style="color: #FFAB00;">Rockstar Games</h1>
+        <h1 class="display-3 fw-bold" style="color: #ffab00">Rockstar Games</h1>
         <p class="lead text-muted mb-4">Home of Grand Theft Auto, Red Dead Redemption series and more.</p>
       </div>
     </section>
@@ -237,43 +379,56 @@
       <!-- CAROUSEL -->
       <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel" aria-label="Aperture showcase">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="images/gta 6.jpg" class="d-block w-100" alt="Grand Theft Auto VI key art">
+            <img src="images/gta 6.jpg" class="d-block w-100" alt="Grand Theft Auto VI key art" />
             <div class="container">
               <div class="carousel-caption text-start">
                 <h1>Grand Theft Auto VI</h1>
-                <p class="opacity-75">Coming May 26, 2026</p>
+                <p class="opacity-75">Coming Nov 19, 2026</p>
                 <p>
-                  <button class="btn btn-lg btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#carouselModal1">Learn More</button>
+                  <button class="btn btn-lg btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#carouselModal1">
+                    Learn More
+                  </button>
                 </p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/rdr2.jpg" class="d-block w-100" alt="Red Dead Redemption 2 landscape">
+            <img src="images/rdr2.jpg" class="d-block w-100" alt="Red Dead Redemption 2 landscape" />
             <div class="container">
               <div class="carousel-caption">
                 <h1>Red Dead Redemption 2</h1>
                 <p>Explore the wild west.</p>
                 <p>
-                  <button class="btn btn-lg btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#carouselModal2">Learn more</button>
+                  <button class="btn btn-lg btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#carouselModal2">
+                    Learn more
+                  </button>
                 </p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/gta 5 enchanced.jpg" class="d-block w-100" alt="GTA V Enhanced montage">
+            <img src="images/gta 5 enchanced.jpg" class="d-block w-100" alt="GTA V Enhanced montage" />
             <div class="container">
               <div class="carousel-caption text-end">
                 <h1>Grand Theft Auto V Enhanced</h1>
                 <p>Re-experience the crazy world of Grand Theft Auto V.</p>
                 <p>
-                  <button class="btn btn-lg btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#carouselModal3">Learn More</button>
+                  <button class="btn btn-lg btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#carouselModal3">
+                    Learn More
+                  </button>
                 </p>
               </div>
             </div>
@@ -293,7 +448,7 @@
       <section class="text-center py-5 border-top border-bottom gta6-banner">
         <div class="container">
           <h1 class="display-1 fw-bold text-uppercase gta6-text">Grand Theft Auto VI</h1>
-          <p class="lead text-secondary mt-3" style="max-width:700px;margin:0 auto;">
+          <p class="lead text-secondary mt-3" style="max-width: 700px; margin: 0 auto">
             The next evolution of open-world storytelling — welcome back to Vice City.
           </p>
         </div>
@@ -301,7 +456,6 @@
 
       <!-- CONTENT -->
       <div class="container marketing">
-
         <!-- CHARACTERS -->
         <section id="characters" class="py-5">
           <div class="container">
@@ -312,7 +466,7 @@
               <div class="col-12 col-md-4 col-lg-3">
                 <div class="card h-100 bg-body-tertiary border-0 shadow-sm">
                   <div class="card-body d-flex flex-column align-items-center">
-                    <img src="images/lucia.jpeg" class="rounded-circle avatar-220" alt="Lucia portrait" loading="lazy">
+                    <img src="images/lucia.jpeg" class="rounded-circle avatar-220" alt="Lucia portrait" loading="lazy" />
                     <h3 class="h4 mb-1 mt-3">Lucia</h3>
                     <p class="text-secondary small mb-3">Grit, hustle, and a plan that won’t quit.</p>
                     <button class="btn btn-primary btn-lg mt-auto" data-bs-toggle="modal" data-bs-target="#charLucia">
@@ -326,7 +480,12 @@
               <div class="col-12 col-md-4 col-lg-3">
                 <div class="card h-100 bg-body-tertiary border-0 shadow-sm">
                   <div class="card-body d-flex flex-column align-items-center">
-                    <img src="images/jason.jpg" class="rounded-circle avatar-220 avatar-jason" alt="Jason portrait" loading="lazy">
+                    <img
+                      src="images/jason.jpg"
+                      class="rounded-circle avatar-220 avatar-jason"
+                      alt="Jason portrait"
+                      loading="lazy"
+                    />
                     <h3 class="h4 mb-1 mt-3">Jason</h3>
                     <p class="text-secondary small mb-3">Fast talker. Faster driver. Trouble finds him.</p>
                     <button class="btn btn-primary btn-lg mt-auto" data-bs-toggle="modal" data-bs-target="#charJason">
@@ -335,7 +494,8 @@
                   </div>
                 </div>
               </div>
-            </div> <!-- /row -->
+            </div>
+            <!-- /row -->
           </div>
         </section>
 
@@ -348,11 +508,19 @@
               Welcome back to Vice City. <span class="text-body-secondary">Sunburned chrome. Fresh trouble.</span>
             </h2>
             <p class="lead">
-              From neon boulevards to back-alley shortcuts, the city feels alive—crowds, traffic, and social feeds reacting to every stunt you pull in broad daylight.
+              From neon boulevards to back-alley shortcuts, the city feels alive—crowds, traffic, and social feeds reacting
+              to every stunt you pull in broad daylight.
             </p>
           </div>
           <div class="col-md-5">
-            <img src="images/gta 6 ss 1.jpg" class="featurette-image img-fluid mx-auto" width="500" height="500" alt="Feature 1" loading="lazy">
+            <img
+              src="images/gta 6 ss 1.jpg"
+              class="featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+              alt="Feature 1"
+              loading="lazy"
+            />
           </div>
         </div>
 
@@ -364,11 +532,19 @@
               Heat of the night. <span class="text-body-secondary">Lose the cops—find the rhythm.</span>
             </h2>
             <p class="lead">
-              Packed rooms, bass that rattles the street, and a wardrobe that changes the vibe. Blend in, scope a score, and vanish into the crowd when it pops off.
+              Packed rooms, bass that rattles the street, and a wardrobe that changes the vibe. Blend in, scope a score, and
+              vanish into the crowd when it pops off.
             </p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img src="images/gta 6 ss 2.jpg" class="featurette-image img-fluid mx-auto" width="500" height="500" alt="Feature 2" loading="lazy">
+            <img
+              src="images/gta 6 ss 2.jpg"
+              class="featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+              alt="Feature 2"
+              loading="lazy"
+            />
           </div>
         </div>
 
@@ -380,11 +556,19 @@
               Ride or collide. <span class="text-body-secondary">Every crew has an engine.</span>
             </h2>
             <p class="lead">
-              Biker packs own the highways at dawn. Cut a deal, cut them off, or cut and run—improved handling and convoy chases turn every mile into a story.
+              Biker packs own the highways at dawn. Cut a deal, cut them off, or cut and run—improved handling and convoy
+              chases turn every mile into a story.
             </p>
           </div>
           <div class="col-md-5">
-            <img src="images/gta 6 ss 3.jpg" class="featurette-image img-fluid mx-auto" width="500" height="500" alt="Feature 3" loading="lazy">
+            <img
+              src="images/gta 6 ss 3.jpg"
+              class="featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+              alt="Feature 3"
+              loading="lazy"
+            />
           </div>
         </div>
 
@@ -392,10 +576,11 @@
       </div>
 
       <!-- FOOTER -->
-      <footer class="container py-4">
+      <footer class="container py-4" id="footer">
         <div class="d-flex justify-content-between align-items-center">
           <p class="mb-0 small text-secondary">
-            Non-commercial portfolio website. Not affiliated with or endorsed by Rockstar Games. All trademarks belong to their respective owners.
+            Non-commercial portfolio website. Not affiliated with or endorsed by Rockstar Games. All trademarks belong to
+            their respective owners.
           </p>
           <p class="mb-0"><a href="#">Back to top</a></p>
         </div>
@@ -415,12 +600,13 @@
             <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>Coming May 26, 2026. Here’s a short description or teaser paragraph for GTA VI. Bro ipsum dolor sit amet beater rigid caballerial chain suck gorby, huckfest core shot gaper avie twister roadie granny gear hardtail gnar 360. Dirt grunt back country grind death cookies, hardtail grom. Death cookies bunny slope white room, grind rigid steeps heli flow epic sucker hole jib ride around trail swag cornice. Pow pow glades gapers gnar, pillow popping bomb hole backside piste air hot dogging ride skinny grind.
-
-Flow dope core shot nose grom first tracks drop lid gondy. Gaper bail bump, ripper beater hardtail cornice Whistler euro hellflip gapers presta caballerial sucker hole wheelie. Rail core shot acro north shore huck. Bike hot dogging single track gondy bail.
-
-Bonk death cookies gondy couloir couloir Skate sharkbite line Ski pow flow berm. Table top laps groomer cornice euro rig skid lid. Piste taco glove spread eagle free ride backside. Drop single track dust on crust dope hurl carcass line.</p>
-           
+            <p>
+              Coming Nov 19, 2026. Here’s a short description or teaser paragraph for GTA VI. Bro ipsum dolor sit amet beater
+              rigid caballerial chain suck gorby, huckfest core shot gaper avie twister roadie granny gear hardtail gnar 360.
+              Dirt grunt back country grind death cookies, hardtail grom. Death cookies bunny slope white room, grind rigid
+              steeps heli flow epic sucker hole jib ride around trail swag cornice. Pow pow glades gapers gnar, pillow popping
+              bomb hole backside piste air hot dogging ride skinny grind.
+            </p>
           </div>
           <div class="modal-footer">
             <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Official page</a>
@@ -438,18 +624,11 @@ Bonk death cookies gondy couloir couloir Skate sharkbite line Ski pow flow berm.
             <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>Explore the wild west with Arthur Morgan and the Van der Linde gang. Bro ipsum dolor sit amet dirt flow cornice, dust on crust shred jib scream Snowboard hurl carcass gapers big ring bump freshies air drop. Stoked BB 360 scream, taco mitt sketching grab 360 skinny. Gear jammer washboard face shots chain ring, DH epic bonk giblets roadie 360 frontside face plant death cookies whip gnar. Death cookies stomp hammer grunt table top dope. Stoked newschooler air free ride chowder core shot.
-
-Dirtbag heli laps stoked dust on crust jib, laps pinner phat white room back country first tracks sucker hole sharkbite cruiser. Single track misty japan air giblets heli granny gear first tracks face shots face plant. Yard sale dirtbag bonk, north shore face plant hardtail nose press dirt booter shreddin. Spin huck free ride air bail, taco mitt stoked hero dust on crust flow bomb stomp back country.
-
-Bomb jib flowy, bonk core shot drop switch bump T-bar shuttle. T-bar air white room jib ripper gnar bro avie huck hammer hardtail scream gaper face shots. Grab grip tape frozen chicken heads yard sale, berm cornice huck cork rail sketching Bike punter greasy. Clean first tracks death cookies free ride berm road rash. Dope jib epic saddle bear trap frozen chicken heads backside titanium laps euro. Free ride air huck wheelie couloir white room wheels, switch glades huckfest hurl carcass grom.
-
-Sketching skinny steeps reverse camber, acro heli corduroy brain bucket daffy. Acro epic berm, switch whip brain bucket corn schraeder bowl death cookies fully. Ride Whistler white room trucks huck dirt bonk jib face plant stoked. Free ride air wheelie drop, flow dust on crust liftie noodle hurl carcass. Flow gaper rock roll T-bar bonk nose, OTB heli stoked bro bunny slope pow pow. Carbon heli tele titanium deck crank steeps couloir free ride ride around punter derailleur. Gaper back country pow pow chain suck free ride skid cork steeps rip gapers hardtail.
-
-Bike stomp rail heli dirtbag, trail swag stoked gaper brain bucket. Clean smear granny gear acro, chain suck 360 back country couloir table top huck ripping rail line dust on crust 180. Ride around sucker hole wheelie drop spread eagle stomp phat, grom switch hardtail freshies. Free ride epic smear, corduroy skid bump rig. Stoked freshies hammer, cornice rock-ectomy stunt bro afterbang schraeder BB. Steed pinner scream hurl carcass giblets nose euro BB japan air stoked.
-
-DH reverse camber wack stoked huck slash deck pow. Yard sale euro flow roadie huck hellflip face plant 180 stunt core shot brain bucket. Poaching rip dirt carbon taco, bro roadie huckfest bump face plant cork nose. Betty back country lid skid lid line corduroy mute grom apres piste.</p>
-            
+            <p>
+              Explore the wild west with Arthur Morgan and the Van der Linde gang. Bro ipsum dolor sit amet dirt flow
+              cornice, dust on crust shred jib scream Snowboard hurl carcass gapers big ring bump freshies air drop. Stoked BB
+              360 scream, taco mitt sketching grab 360 skinny.
+            </p>
           </div>
           <div class="modal-footer">
             <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Official page</a>
@@ -467,18 +646,10 @@ DH reverse camber wack stoked huck slash deck pow. Yard sale euro flow roadie hu
             <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>Ray-traced shadows, higher draw distance, and performance modes. Bro ipsum dolor sit amet dirt flow cornice, dust on crust shred jib scream Snowboard hurl carcass gapers big ring bump freshies air drop. Stoked BB 360 scream, taco mitt sketching grab 360 skinny. Gear jammer washboard face shots chain ring, DH epic bonk giblets roadie 360 frontside face plant death cookies whip gnar. Death cookies stomp hammer grunt table top dope. Stoked newschooler air free ride chowder core shot.
-
-Dirtbag heli laps stoked dust on crust jib, laps pinner phat white room back country first tracks sucker hole sharkbite cruiser. Single track misty japan air giblets heli granny gear first tracks face shots face plant. Yard sale dirtbag bonk, north shore face plant hardtail nose press dirt booter shreddin. Spin huck free ride air bail, taco mitt stoked hero dust on crust flow bomb stomp back country.
-
-Bomb jib flowy, bonk core shot drop switch bump T-bar shuttle. T-bar air white room jib ripper gnar bro avie huck hammer hardtail scream gaper face shots. Grab grip tape frozen chicken heads yard sale, berm cornice huck cork rail sketching Bike punter greasy. Clean first tracks death cookies free ride berm road rash. Dope jib epic saddle bear trap frozen chicken heads backside titanium laps euro. Free ride air huck wheelie couloir white room wheels, switch glades huckfest hurl carcass grom.
-
-Sketching skinny steeps reverse camber, acro heli corduroy brain bucket daffy. Acro epic berm, switch whip brain bucket corn schraeder bowl death cookies fully. Ride Whistler white room trucks huck dirt bonk jib face plant stoked. Free ride air wheelie drop, flow dust on crust liftie noodle hurl carcass. Flow gaper rock roll T-bar bonk nose, OTB heli stoked bro bunny slope pow pow. Carbon heli tele titanium deck crank steeps couloir free ride ride around punter derailleur. Gaper back country pow pow chain suck free ride skid cork steeps rip gapers hardtail.
-
-Bike stomp rail heli dirtbag, trail swag stoked gaper brain bucket. Clean smear granny gear acro, chain suck 360 back country couloir table top huck ripping rail line dust on crust 180. Ride around sucker hole wheelie drop spread eagle stomp phat, grom switch hardtail freshies. Free ride epic smear, corduroy skid bump rig. Stoked freshies hammer, cornice rock-ectomy stunt bro afterbang schraeder BB. Steed pinner scream hurl carcass giblets nose euro BB japan air stoked.
-
-DH reverse camber wack stoked huck slash deck pow. Yard sale euro flow roadie huck hellflip face plant 180 stunt core shot brain bucket. Poaching rip dirt carbon taco, bro roadie huckfest bump face plant cork nose. Betty back country lid skid lid line corduroy mute grom apres piste.</p>
-            
+            <p>
+              Ray-traced shadows, higher draw distance, and performance modes. Bro ipsum dolor sit amet dirt flow cornice,
+              dust on crust shred jib scream Snowboard hurl carcass gapers big ring bump freshies air drop.
+            </p>
           </div>
           <div class="modal-footer">
             <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Official page</a>
@@ -488,141 +659,144 @@ DH reverse camber wack stoked huck slash deck pow. Yard sale euro flow roadie hu
       </div>
     </div>
 
-   <!-- Lucia modal (text-only bio) -->
-<div class="modal fade" id="charLucia" tabindex="-1" aria-hidden="true" aria-labelledby="charLuciaTitle">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="charLuciaTitle">Lucia — The Planner</h5>
-        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body">
-        <p class="lead mb-4">
-          Grit, hustle, and quiet precision. Lucia reads a room faster than most people read a headline—she’s the one who maps the exits and still walks out first.
-        </p>
-
-        <div class="row g-4">
-          <div class="col-md-7">
-            <h6 class="text-uppercase text-secondary mb-2">Bio</h6>
-            <p class="mb-3">
-              Raised on the edge of Vice City’s sunburned suburbs, Lucia learned early that survival is a team sport.
-              She keeps a tight circle, a tighter schedule, and a notebook full of ways out. When the heat rises, she
-              gets calmer—counting seconds, signals, and camera arcs like a rhythm only she can hear.
-            </p>
-            <h6 class="text-uppercase text-secondary mb-2">Skills</h6>
-            <ul class="mb-0">
-              <li>Heist planning & route optimization</li>
-              <li>Social engineering & disguise work</li>
-              <li>Dual-wield close-quarters control</li>
-            </ul>
+    <!-- Lucia modal -->
+    <div class="modal fade" id="charLucia" tabindex="-1" aria-hidden="true" aria-labelledby="charLuciaTitle">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="charLuciaTitle">Lucia — The Planner</h5>
+            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
 
-          <div class="col-md-5">
-            <h6 class="text-uppercase text-secondary mb-2">Loadout</h6>
-            <ul class="mb-3">
-              <li>Suppressed pistol, compact SMG</li>
-              <li>Signal scrambler, micro tracker</li>
-              <li>Decoy plates, burner phone</li>
-            </ul>
+          <div class="modal-body">
+            <p class="lead mb-4">
+              Grit, hustle, and quiet precision. Lucia reads a room faster than most people read a headline—she’s the one who
+              maps the exits and still walks out first.
+            </p>
 
-            <h6 class="text-uppercase text-secondary mb-2">Traits</h6>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge text-dark bg-warning">Strategic</span>
-              <span class="badge text-bg-secondary">Low-Profile</span>
-              <span class="badge text-bg-secondary">Ice-Cold</span>
+            <div class="row g-4">
+              <div class="col-md-7">
+                <h6 class="text-uppercase text-secondary mb-2">Bio</h6>
+                <p class="mb-3">
+                  Raised on the edge of Vice City’s sunburned suburbs, Lucia learned early that survival is a team sport. She
+                  keeps a tight circle, a tighter schedule, and a notebook full of ways out. When the heat rises, she gets
+                  calmer—counting seconds, signals, and camera arcs like a rhythm only she can hear.
+                </p>
+                <h6 class="text-uppercase text-secondary mb-2">Skills</h6>
+                <ul class="mb-0">
+                  <li>Heist planning &amp; route optimization</li>
+                  <li>Social engineering &amp; disguise work</li>
+                  <li>Dual-wield close-quarters control</li>
+                </ul>
+              </div>
+
+              <div class="col-md-5">
+                <h6 class="text-uppercase text-secondary mb-2">Loadout</h6>
+                <ul class="mb-3">
+                  <li>Suppressed pistol, compact SMG</li>
+                  <li>Signal scrambler, micro tracker</li>
+                  <li>Decoy plates, burner phone</li>
+                </ul>
+
+                <h6 class="text-uppercase text-secondary mb-2">Traits</h6>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge text-dark bg-warning">Strategic</span>
+                  <span class="badge text-bg-secondary">Low-Profile</span>
+                  <span class="badge text-bg-secondary">Ice-Cold</span>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="modal-footer border-0">
+            <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
-
-      <div class="modal-footer border-0">
-        <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-        
-      </div>
     </div>
-  </div>
-</div>
 
-<!-- Jason modal (text-only bio) -->
-<div class="modal fade" id="charJason" tabindex="-1" aria-hidden="true" aria-labelledby="charJasonTitle">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="charJasonTitle">Jason — The Wheelman</h5>
-        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body">
-        <p class="lead mb-4">
-          Fast talker. Faster driver. Jason turns chaos into clean lines—if there’s an opening, he’ll thread it at 120 and smile about it later.
-        </p>
-
-        <div class="row g-4">
-          <div class="col-md-7">
-            <h6 class="text-uppercase text-secondary mb-2">Bio</h6>
-            <p class="mb-3">
-              Jason learned grip and throttle on cracked coastal roads and never shook the habit. He keeps the crew moving—
-              vans, coupes, boats—whatever gets you from hot to gone. When the radios light up, he’s already picked three exits.
-            </p>
-            <h6 class="text-uppercase text-secondary mb-2">Skills</h6>
-            <ul class="mb-0">
-              <li>Advanced driving & pursuit evasion</li>
-              <li>On-the-fly vehicle repairs</li>
-              <li>Close protection under fire</li>
-            </ul>
+    <!-- Jason modal -->
+    <div class="modal fade" id="charJason" tabindex="-1" aria-hidden="true" aria-labelledby="charJasonTitle">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="charJasonTitle">Jason — The Wheelman</h5>
+            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
 
-          <div class="col-md-5">
-            <h6 class="text-uppercase text-secondary mb-2">Loadout</h6>
-            <ul class="mb-3">
-              <li>Carbine, short shotgun</li>
-              <li>Run-flat kit, tow strap</li>
-              <li>Signal jammer, spike strip (compact)</li>
-            </ul>
+          <div class="modal-body">
+            <p class="lead mb-4">
+              Fast talker. Faster driver. Jason turns chaos into clean lines—if there’s an opening, he’ll thread it at 120 and
+              smile about it later.
+            </p>
 
-            <h6 class="text-uppercase text-secondary mb-2">Traits</h6>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge text-dark bg-warning">Fearless</span>
-              <span class="badge text-bg-secondary">Loyal</span>
-              <span class="badge text-bg-secondary">Improviser</span>
+            <div class="row g-4">
+              <div class="col-md-7">
+                <h6 class="text-uppercase text-secondary mb-2">Bio</h6>
+                <p class="mb-3">
+                  Jason learned grip and throttle on cracked coastal roads and never shook the habit. He keeps the crew
+                  moving—vans, coupes, boats—whatever gets you from hot to gone. When the radios light up, he’s already picked
+                  three exits.
+                </p>
+                <h6 class="text-uppercase text-secondary mb-2">Skills</h6>
+                <ul class="mb-0">
+                  <li>Advanced driving &amp; pursuit evasion</li>
+                  <li>On-the-fly vehicle repairs</li>
+                  <li>Close protection under fire</li>
+                </ul>
+              </div>
+
+              <div class="col-md-5">
+                <h6 class="text-uppercase text-secondary mb-2">Loadout</h6>
+                <ul class="mb-3">
+                  <li>Carbine, short shotgun</li>
+                  <li>Run-flat kit, tow strap</li>
+                  <li>Signal jammer, spike strip (compact)</li>
+                </ul>
+
+                <h6 class="text-uppercase text-secondary mb-2">Traits</h6>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge text-dark bg-warning">Fearless</span>
+                  <span class="badge text-bg-secondary">Loyal</span>
+                  <span class="badge text-bg-secondary">Improviser</span>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="modal-footer border-0">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
-
-      <div class="modal-footer border-0">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        
-      </div>
     </div>
-  </div>
-</div>
 
-
-    <!-- Bootstrap JS (only once) -->
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
 
-    <!-- Scroll reveal (fade-in on enter, fade-out on leave) -->
+    <!-- Scroll reveal -->
     <script>
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('is-visible');     // fade in
-          } else {
-            e.target.classList.remove('is-visible');  // fade out when leaving
-          }
-        });
-      }, {
-        threshold: 0.12,
-        rootMargin: "0px 0px -10% 0px"
-      });
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("is-visible");
+            } else {
+              e.target.classList.remove("is-visible");
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -10% 0px",
+        }
+      );
 
-      document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+      document.querySelectorAll(".reveal, .reveal-stagger").forEach((el) => io.observe(el));
     </script>
   </body>
 </html>
